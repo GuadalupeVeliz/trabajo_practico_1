@@ -1,11 +1,8 @@
 package ar.edu.unju.fi.ejercicio2;
 
-import java.util.Scanner;
-
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner (System.in);
 		String nombre="Argentina";
 		int edad =22 ;
 		float altura= 1.67f;
