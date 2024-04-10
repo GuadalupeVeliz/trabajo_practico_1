@@ -63,8 +63,8 @@ public class Persona {
 	public int calcularEdad() {
 		int edad;
 		LocalDate fechaActual=LocalDate.now();
-		edad=fechaActual.getYear()-fechaNacimiento.getYear();
-		if(fechaActual.getDayOfMonth()<fechaNacimiento.getDayOfMonth()) {
+		edad=fechaActual.getYear()-this.fechaNacimiento.getDayOfMonth();
+		if(fechaActual.getDayOfMonth()<this.fechaNacimiento.getDayOfMonth()) {
 			edad--;
 		}
 		return edad;
@@ -75,10 +75,10 @@ public class Persona {
 	}
 	
 	public void mostrarDatos() {
-		System.out.println("DNI: "+this.getDni());
-		System.out.println("Nombre: "+this.getNombre());
-		System.out.println("Provincia: "+this.getProvincia());
-		System.out.println("Fecha de Nacimiento: "+this.getFechaNacimiento());
+		System.out.println("DNI: "+this.dni);
+		System.out.println("Nombre: "+this.nombre);
+		System.out.println("Provincia: "+this.provincia);
+		System.out.println("Fecha de Nacimiento: "+this.fechaNacimiento);
 		if(calcularEdad()>=10) {
 			System.out.println("La persona es Mayor de edad");
 		} else {
