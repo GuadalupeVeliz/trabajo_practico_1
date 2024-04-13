@@ -16,6 +16,7 @@ public class Main {
 		for(i=0;i<8;i++) {
 			System.out.println(" Posicion: "+i+" Numero: "+numeros[i]);
 		}
+		sc.close();
 	}
 
 }
