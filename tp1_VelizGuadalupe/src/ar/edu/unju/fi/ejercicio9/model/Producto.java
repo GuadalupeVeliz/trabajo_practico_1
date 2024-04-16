@@ -43,6 +43,6 @@ public class Producto {
 	}
 	
 	public double calcularDescuento() {
-		return precio-descuento;
+		return precio-(precio*descuento/100);
 	}
 }

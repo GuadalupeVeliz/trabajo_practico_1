@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		try (Scanner sc = new Scanner(System.in)) {
+		Scanner sc = new Scanner(System.in);
 			int num=1,i;
 			String nombre;
 			
@@ -27,7 +27,6 @@ public class Main {
 			for(i=num;i>0;i--) {
 				System.out.println("Nombre: "+nombres[i-1]);
 			}
-		}
 		
 	}
 }

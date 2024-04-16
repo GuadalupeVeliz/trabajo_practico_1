@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		try (Scanner sc = new Scanner(System.in)) {
+		Scanner sc = new Scanner(System.in);
 			int cantidad=-1,i,num,suma=0;
 			
 			while(cantidad<3 || cantidad >10) {
@@ -25,7 +25,5 @@ public class Main {
 			}
 			System.out.println("Suma: "+suma);
 		}
-		
-	}
 
 }
