@@ -1,6 +1,7 @@
 package ar.edu.unju.fi.ejercicio6.model;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Persona {
 	private int dni;
@@ -61,13 +62,9 @@ public class Persona {
 	}
 	
 	public int calcularEdad() {
-		int edad;
 		LocalDate fechaActual=LocalDate.now();
-		edad=fechaActual.getYear()-this.fechaNacimiento.getDayOfMonth();
-		if(fechaActual.getDayOfMonth()<this.fechaNacimiento.getDayOfMonth()) {
-			edad--;
-		}
-		return edad;
+        Period periodo = Period.between(this.fechaNacimiento, fechaActual);
+        return periodo.getYears();
 	}
 	
 	public boolean verificarEdad() {
@@ -79,6 +76,7 @@ public class Persona {
 		System.out.println("Nombre: "+this.nombre);
 		System.out.println("Provincia: "+this.provincia);
 		System.out.println("Fecha de Nacimiento: "+this.fechaNacimiento);
+		System.out.println("Edad: "+calcularEdad());
 		if(calcularEdad()>=10) {
 			System.out.println("La persona es Mayor de edad");
 		} else {
