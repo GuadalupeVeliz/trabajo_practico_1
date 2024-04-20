@@ -16,7 +16,7 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		ArrayList <Jugador> jugadores = new ArrayList<>();
-		int op=1;
+		int op=9;
 		while(op!=8) {
 			op=menu(sc);
 			switch(op) {
@@ -51,7 +51,6 @@ public class Main {
 		sc.close();
 	}
 
-	
 	public static int menu(Scanner sc) {
 		int opcion=9;
 		System.out.println("*********** Menu *******");
